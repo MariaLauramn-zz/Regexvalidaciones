@@ -10,23 +10,23 @@
 <form>
         <div class="datespersonal">
             <label for="name">Nombre:</label>
-            <input type="text" id="name" pattern="^(\s)*[A-Za-z]+((\s)?((\'|\-|\.)?([A-Za-z])+))*(\s)*$">
+            <input type="text" id="name" pattern="^[\p{L} \.'\-]+$" title="Debe colocar el formato correcto">
             <label for="lastname">Apellidos:</label>
-            <input type="text" id="lastname" pattern="^(\s)*[A-Za-z]+((\s)?((\'|\-|\.)?([A-Za-z])+))*(\s)*$">
+            <input type="text" id="lastname" pattern="^[\p{L} \.'\-]+$" title="Debe colocar el formato correcto">
             <label for="dni">DNI/NIE:</label>
             <input type="text" id="dni" pattern="^(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"
-                   title="Ingrese el formato correcto DNI (8 digitos y 1 letra) / NIE: (1 letra, 7-9 digitos y 1 letra">
+                   title="Ingrese el formato correcto DNI (Ej. 999999999C) / NIE: (Ej. Z999999-Y">
             <label for="phone">Número móvil o fijo:</label>
-            <input type="text" id="phone"
-                   pattern="^[+34|0034|34]+[ -]?([0-9]{3}[ -]?)([0-9]{1,3}[ -]?)([0-9]{0,3}[ -]?)$"
+            <input type="tel" id="phone"
+                   pattern="^[+34|0034|34]+[ -]?([0-9]{3}[ -]?)([0-9]{1,3}[ |-| .]?))$"
                    title="El número de teléfono debe tener el formato correcto (34/+34/0034) y 9 dígitos">
             <label for="email">Email:</label>
             <input type="email" id="email" pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                    title="Debe ingresar el formato correcto para el e-mail">
             <label for="direction">Dirección:</label>
-            <input type="text" id="direction" pattern="^([a-zA-Z-0-9)([,| |#])?">
+            <input type="text" id="direction" pattern="^([a-zA-Z-ú0-9, .#])+\d">
             <div>
-                <input type="submit"id="button" title="Enviar">
+                <input type="submit" id="button" title="Enviar">
             </div>
         </div>
 </form>
