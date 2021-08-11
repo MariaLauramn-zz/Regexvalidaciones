@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Chalkboard, sans-serif, Tahoma;
+}
+
+.datespersonal{
+    display: grid;
+    align-items: center;
+    grid-template-rows:2em max-content;
+    grid-gap:1em;
+    margin: 5% 20% 5% 20%;
+    justify-content: center;
+    font-weight: bold;
+    border-style: groove;
+    padding-bottom: 20px;
+
+}
+input#name, input#lastname, input#dni, input#phone, input#email, input#direction{
+    width: 130%;
+    height: 100%;
+    border: 3px solid #8d8c8c;
+    border-radius: 10px;
+    background: #e5e3e3;
+    font-size: 16px;
+    outline: none;
+}
+
+#name:hover, #lastname:hover, #dni:hover, #phone:hover, #email:hover, #direction:hover{
+    border-color: #09889e;
+}
+
+input#button{
+    width: 50px;
+    height: 30px;
+    border: 1px solid #8d8c8c;
+}
+
+input#button:hover{
+    background: #09889e;
+    color: white;
+}
